@@ -50,6 +50,18 @@
         alpha.name = 'tony stark';
         console.log(alpha);
 
+        // 嵌套对象
+        var bravo = {
+            name: 'howard',
+            son: {
+                name: 'stark',
+                age: 32,
+            }
+        };
+
+        console.log(bravo.son.name);
+        console.log(bravo['son']['name']);
+
 
         // typeof输出数据类型
         // console.log(typeof alpha);
@@ -59,6 +71,73 @@
         // console.log(typeof 12.23);
         // console.log(typeof 'abc');
         // console.log(typeof null);
+
+        // Array数组, []中可以是任意值，可以保存任意多
+        var mates = ['tony', 'thor', 'steve', 'banner', 'loki', 0, 1, null, false, undefined];
+        console.log(mates);
+        // 获取arr中某一个值
+        console.log(mates[0]);
+        console.log(mates[8]);
+
+        // 更新
+        mates[8] = 'python';
+        console.log(mates[8]);
+        // 获取数组的长度
+        console.log(mates.length);
+
+        // 增加一项
+        mates[mates.length] = '新增的';
+        console.log(mates);
+
+        // 删除,改变长度,通过操作length属性删除或者清空数组
+        mates.length = 10;
+        console.log(mates);
+        // 通过delete删除,会把这个位置的value清空，数组的长度仍然不变
+        delete mates[0];
+        console.log(mates);
+        // 记录
+        var thor = {
+            name: 'thor',
+            age: 3500,
+            feature: 'god of thunder',
+        };
+
+        var loki = {
+            name: 'loki',
+            age: 3400,
+            feature: 'god of mischeif',
+        };
+
+        var tony = {
+            name: 'tony stark',
+            age: 36,
+            feature: 'iron man'
+        };
+
+        var steve = {
+            name: 'steve rogers',
+            age: '100',
+            feature: 'capatin of america',
+        };
+
+        var avenages = [
+            {name: 'steve rogers', age: '100', feature: 'capatin of america',},
+            {name: 'tony stark', age: '100', feature: 'iron man',},
+            {name: 'thor', age: '100', feature: 'god of thunder',},
+        ];
+
+        console.log(avenages[1]['name']);
+        console.log(avenages[2].feature);
+
+        /**
+         * 引用数据类型为什么叫引用数据类型
+         * 所有变量都保存在内存中
+         * 简单数据类型保存在栈内存中
+         * 引用数据类型的value保存在堆内存中
+         * 引用数据类型变量的名字保存在栈内存中
+         */
+
+
 
 
     </script>
