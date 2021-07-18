@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>数据类型的相互转换</title>
+</head>
+<body>
+    <script>
+        // 函数 function
+        // 写法 function + 空格 + 函数名 + () + 空格 + {}
+        function sum() {
+            // 具体代码
+            console.log(1);
+
+        }
+
+        // 调用函数 函数名（）；
+        sum(); // 运行函数中的代码
+
+        function sum1(){
+            console.log('我是sum1函数');
+        }
+
+        sum1();
+
+        // 带入参的函数
+        function factory(data) {
+            console.log(data);
+        }
+
+        factory('皮皮虾');
+        factory('基围虾');
+        console.log(typeof factory);
+    </script>
+</body>
+</html>
