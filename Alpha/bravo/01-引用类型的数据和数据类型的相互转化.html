@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>引用数据类型和数据类型之间的相互转化</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 变量的作用,保存值
+        var alpha = 123;
+        console.log(alpha);
+        /*
+        数据类型：
+        简单数据类型:Number String Undefined Null Boolean
+        复杂数据类型(引用类型)：
+            Object对象（json格式的对象）
+            Array数组
+            Function函数
+         */
+
+        // Object对象:用来存储大量数据，对数据类型没有限制，key-value格式,属性名不要用数字表示
+        var alpha = {
+            name: 'stark',
+            age: 46,
+            company: 'stark industry',
+            male: 'M',
+        };
+        console.log(alpha);
+        // 通过两种方式使用对象的属性值， 对象.属性名， 对象['属性名']
+        // .点 操作符会把后面的东西转化成字符串
+        console.log(alpha.name);
+        // 添加属性
+        alpha.nickname = 'iron man'; // 添加属性方式1
+        console.log(alpha);
+        alpha['number'] = 1;  //添加属性方式2
+        console.log(alpha);
+
+        // 删除属性, 使用delete关键字， 用于删除对象中的某个属性
+        delete alpha.number;
+        console.log(alpha);
+
+        // 更新属性, 用等号赋值，覆盖原来的值
+        alpha.name = 'tony stark';
+        console.log(alpha);
+
+
+        // typeof输出数据类型
+        // console.log(typeof alpha);
+        // var bravo = 123;
+        // console.log(typeof bravo);
+        // console.log(typeof true);
+        // console.log(typeof 12.23);
+        // console.log(typeof 'abc');
+        // console.log(typeof null);
+
+
+    </script>
+</body>
+</html>
