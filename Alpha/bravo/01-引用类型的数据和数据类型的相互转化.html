@@ -137,6 +137,35 @@
          * 引用数据类型变量的名字保存在栈内存中
          */
 
+        /*
+         js中的运算
+
+         */
+        var a_a = 123;
+        var obj_b = {name: '小明'};
+        /*
+        数据类型的相互转化
+        所有的数据类型都可以转化为数字
+         */
+        var num_a = 123;
+        var str_a = '123';
+        var True = true;
+        var False = false;
+        var Unde = undefined;
+        var Null = null;
+        var Arr = [1,2,3];
+        var obj_c = {name: 'xiaoming'};
+
+        // Number() 可以把值转化成数字
+        console.log(Number(str_a));
+        console.log(Number(True));
+        console.log(Number(False));
+        console.log(Number(Unde));
+        console.log(Number(Null));
+        console.log(Number(Arr));
+        console.log(Number(obj_c));  // NaN表示不是一个数字
+
+        // 空格或空字符串转化为0
 
 
 
