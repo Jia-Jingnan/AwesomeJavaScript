@@ -31,6 +31,58 @@
         factory('皮皮虾');
         factory('基围虾');
         console.log(typeof factory);
+
+        // 所有数据类型都可以转化为布尔值,使用Boolean()函数
+        var alpha = '123';
+        console.log(Boolean(alpha)); // 返回true
+        var bravo = '';
+        console.log(Boolean(bravo)); //返回false
+        var charlie = 0;
+        console.log(Boolean(charlie));
+        var delta = 1;
+        console.log(Boolean(delta));
+        var foxtrot = -1;
+        console.log(Boolean(foxtrot));
+
+        // 不管数组是不是空数组，转换为boolean都是true
+        // 所有的数据类型都可以转化为字符串, String()函数转化
+        // 数据.toString() 的效果与String(数据)的效果一样, undefined和null不能使用toString()
+        var golf = 123;
+        console.log(String(golf));
+        console.info(golf.toString());
+        console.log(String(undefined));
+        console.log(String(null));
+        console.log(String(false));
+        console.log(String(true));
+
+        //
+        console.log(String([]));
+        console.log(String({name: '小明'}));
+        // 把数组中每一项转化为字符串，然后用都好隔开
+        console.info(String([1,2,3,true, false]));
+
+        // 如果一个数组使用toString方法，转化成字符串
+        var hotel = 345;
+        console.log(hotel.toString(2)); // 转换成二进制
+
+        // 所有类型的数据都可以转换为Number
+        // parseInt转换成int
+        console.log(parseInt('10', 2));
+        console.log(parseInt('10', 8));
+        console.log(parseInt('10', 16));
+        console.log(parseInt('10', 0));  // 0和10都表示10进制
+        console.log(parseInt('10', 10));
+
+        // parseInt从第一个非空字符串开始解析，只要开头不是数字之外的其他字符，就可以转化为数字
+        // parseInt会把小数点后面的舍弃掉
+        // var iris = '123a';
+        var iris = 'a123';
+        console.log(parseInt(iris));
+        console.log(Number(iris));
+
+        // parseFloat，只能以10进制解析
+        console.log(parseFloat('123.232afeaf'));
+        console.log(parseFloat({name: '123'}));
     </script>
 </body>
 </html>
