@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>运算符</title>
+</head>
+<body>
+
+    <script>
+        /* 运算符
+        + - * /
+         */
+
+        // 数字+数字是简单的数学运算
+        // console.log(1 + 3);
+        // console.log(1.1 + 1.1);
+        // js存储数据是IEE47，双精度浮点数
+        // console.log(0.1 + 0.2); //0.30000000000000004
+        //  先转化为整数，在进行计算，之后将结果再转化
+        // console.log((0.1 * 10 + 0.2 * 10) / 10);   // 0.3
+        // console.log(8.2 * 100);
+        // console.log(1.1 * 100);
+        // NaN和任何值运算的结果都是NaN
+        // Infinity, -Infinity运算结果都是Infinity
+        // 任何数据类型和字符串进行加法运算都会转为字符串
+        // 隐式类型转换使用的都是.toString(), 转化undefined和null使用的是String()
+        // console.log(typeof ({name: '小明'} + '123')); //string
+        // console.log(undefined + 'abc');
+        // console.log(null + 'abc');
+        // console.log([1,2,3] + '1');
+        // console.log([] + '1');
+        // console.log(undefined + null); // null进行加法运算时， null被转化为0， 使用Number()函数转化的
+        // console.log(null + 1); //1
+        // console.log(undefined + 1); //
+        // console.log(null + 'anc'); //转化为字符串， 遇到字符串转字符串，遇到数字转数字
+        // console.log(typeof ('2' + '2'));
+
+        /*
+        数字 + 数字：正常的数学运算
+        undefined null 遇到数字转换成数字，遇到字符串转换为字符串
+        Object, Arrray 计算加法前，先转化为字符串
+        字符串与其他数据类型相加为字符串
+
+         */
+
+        // 正常数字 - 正常数字
+        console.log(2-3);
+        // 小数 - 小数
+        console.log(0.4*100 - 0.3*100);
+        console.log(Infinity - 1000); // Infinity
+        console.log(-Infinity - 10000); //-Infinity
+        console.log(NaN - 1); //NaN
+        console.log(Infinity - Infinity); //NaN
+        // 所有数据类型进行减法运算时都会转为数字
+        console.log('123' - 1); //122
+        console.log('123.1' - 1); //122.1
+        console.log('a123' - 1); // 不是纯数字字符串进行减法结果是NaN
+        console.log(undefined - 1); //NaN
+        console.log(null - 6); // 相当于0 - 6
+        console.log({} - 1); // 对象 -1 ， NaN
+        console.log({} - Infinity); //NaN
+        // 对象和所有数字进行减法都是NaN
+        console.log([1123] - 1); // 先把数组转化为数字
+        console.log([] - 1); // 空数组转化为数组是0
+        // 数字和数字运算 = 数学运算
+        // 所有东西都会转换成数字， null转为0， 空数组[]转为0，数组中有多个元素转为NaN
+
+        // % 模运算， 求余
+        // ++ 表示递增
+        var num = 1;
+        console.log(++ num);
+        // += 操作符如果是后置的，先运算，再自增
+
+    </script>
+</body>
+</html>
