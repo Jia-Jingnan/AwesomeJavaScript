@@ -70,6 +70,17 @@
         var num = 1;
         console.log(++ num);
         // += 操作符如果是后置的，先运算，再自增
+        // || 或， &&与 !非， 把所有数据先转换成布尔值， 使用Boolean()函数转换
+        // !非，先把一个数转化成布尔值，然后取反，
+        console.log(!1);
+        // 0, NaN, undefined, null, false 在用Boolean()函数会转化成false
+        //  其他所有数据做 ! 操作时都转化成true， 所有对象数组都会转化成true
+        // || 或，寻找生命中的唯一 true，
+        console.log(1 || 2); // 从左往右，先把左边的值转化为布尔值，如果为true
+        // 就停止，否则继续下一位转化，直到找到true为止
+
+        // && 与， 从左往右把所有的值转为布尔值，如果为false，就停止，如果为true，继续找
+
 
     </script>
 </body>
